@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import sample.RadomBox?>
+<?import sample.TokioBox?>
+<?import sample.RzymBox?>
+<AnchorPane fx:id="gamePane" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sample.GameController">
+    <children>
+        <HBox fx:id="gameBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+              prefHeight="400.0" prefWidth="600.0" AnchorPane.topAnchor="0">
+            <children>
+                <TabPane blendMode="MULTIPLY" depthTest="ENABLE" minHeight="350" maxHeight="-Infinity"
+                         maxWidth="-Infinity" prefHeight="300.0" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="150.0"
+                         tabMaxWidth="170.0" tabMinHeight="30.0" tabMinWidth="175.0">
+                    <tabs>
+                        <Tab closable="false" text="TOKIO">
+                            <content>
+                                <ScrollPane styleClass="ScrollPane" fitToHeight="true" fitToWidth="true"
+                                            hbarPolicy="NEVER" minHeight="300" prefHeight="300.0" prefWidth="200.0">
+                                    <content>
+                                        <TokioBox prefHeight="400.0"/>
+                                    </content>
+                                </ScrollPane>
+                            </content>
+                        </Tab>
+                        <Tab closable="false" text="RADOM">
+                            <content>
+                                <ScrollPane styleClass="ScrollPane" fitToHeight="true" fitToWidth="true"
+                                            hbarPolicy="NEVER" minHeight="300" prefHeight="300.0" prefWidth="200.0">
+                                    <content>
+                                        <RadomBox prefHeight="400.0"/>
+                                    </content>
+                                </ScrollPane>
+                            </content>
+                        </Tab>
+                        <Tab closable="false" text="RZYM">
+                            <content>
+                                <ScrollPane styleClass="ScrollPane" fitToHeight="true" fitToWidth="true"
+                                            hbarPolicy="NEVER" minHeight="300" prefHeight="300.0" prefWidth="200.0">
+                                    <content>
+                                        <RzymBox prefHeight="400.0"/>
+                                    </content>
+                                </ScrollPane>
+                            </content>
+                        </Tab>
+                    </tabs>
+                    <opaqueInsets>
+                        <Insets/>
+                    </opaqueInsets>
+                </TabPane>
+            </children>
+        </HBox>
+        <HBox layoutY="31.0" prefHeight="30.0" prefWidth="600.0" AnchorPane.bottomAnchor="10" maxHeight="70">
+            <children>
+                <GridPane alignment="BASELINE_CENTER" maxHeight="70" prefHeight="30.0" prefWidth="600.0"
+                          HBox.hgrow="ALWAYS">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0"/>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0"/>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0"/>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0"/>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0"/>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    </rowConstraints>
+                    <children>
+                        <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#getBack" text="BACK"
+                                textAlignment="RIGHT" GridPane.columnIndex="0"/>
+                        <Label contentDisplay="TOP" mnemonicParsing="false" text="SCORE:" textAlignment="LEFT"
+                               GridPane.columnIndex="3"/>
+                        <Label contentDisplay="TOP" fx:id="scoreLabel" mnemonicParsing="false" text="00"
+                               textAlignment="RIGHT" GridPane.columnIndex="4"/>
+                    </children>
+                </GridPane>
+            </children>
+        </HBox>
+    </children>
+    <opaqueInsets>
+        <Insets bottom="100.0" left="100.0" right="100.0" top="10.0"/>
+    </opaqueInsets>
+</AnchorPane>

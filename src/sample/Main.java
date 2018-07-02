@@ -6,6 +6,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
@@ -18,7 +19,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         root = FXMLLoader.load(getClass().getResource("menuFXML.fxml"));
-        primaryStage.setTitle("Builder");
+        primaryStage.setTitle("FXClicker");
         Scene firstScene = new Scene(root,600,400);
 
         firstScene.getStylesheets().add
@@ -34,6 +35,7 @@ public class Main extends Application {
                 System.exit(0);
             }
         });
+        primaryStage.getIcons().add(new Image("res/lock.png"));
     }
 
 

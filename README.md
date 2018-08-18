@@ -14,7 +14,7 @@ Player has to earn and spend money - buying new rooms and hiring workers in thre
 
 ## Technologies
 
-JavaFX (version 1.8.0_144)
+JavaFX 
 
 ## Credits
 
